@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema foodStock
+-- Schema marcosvir_lucasJ
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema foodStock
+-- Schema marcosvir_lucasJ
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `foodStock` DEFAULT CHARACTER SET utf8 ;
-USE `foodStock` ;
+CREATE SCHEMA IF NOT EXISTS `marcosvir_lucasJ` DEFAULT CHARACTER SET utf8 ;
+USE `marcosvir_lucasJ` ;
 
 -- -----------------------------------------------------
--- Table `foodStock`.`restaurante`
+-- Table `marcosvir_lucasJ`.`restaurante`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `foodStock`.`restaurante` (
+CREATE TABLE IF NOT EXISTS `marcosvir_lucasJ`.`restaurante` (
   `idrestaurante` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(45) NOT NULL,
@@ -31,9 +31,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `foodStock`.`lanche`
+-- Table `marcosvir_lucasJ`.`lanche`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `foodStock`.`lanche` (
+CREATE TABLE IF NOT EXISTS `marcosvir_lucasJ`.`lanche` (
   `idlanche` INT NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   `descricao` VARCHAR(45) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `foodStock`.`lanche` (
   INDEX `fk_lanche_restaurante_idx` (`restaurante_idrestaurante` ASC) VISIBLE,
   CONSTRAINT `fk_lanche_restaurante`
     FOREIGN KEY (`restaurante_idrestaurante`)
-    REFERENCES `foodStock`.`restaurante` (`idrestaurante`)
+    REFERENCES `marcosvir_lucasJ`.`restaurante` (`idrestaurante`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
