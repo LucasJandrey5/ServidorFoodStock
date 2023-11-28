@@ -30,10 +30,10 @@ if ($data = json_decode($inputFile, true)) {
     if (json_last_error() === JSON_ERROR_NONE) {
 
         $stmt = $conn->prepare("INSERT INTO restaurante (nome, descricao, endereco, horario) 
-        VALUES (:nome, :descricaoRes, :endereco, :horario)");
+        VALUES (:nome, :descricao, :endereco, :horario)");
 
         $stmt->bindParam(':nome', $data['nome']);
-        $stmt->bindParam(':descricaoRes', $data['descricaoRes']);
+        $stmt->bindParam(':descricao', $data['descricao']);
         $stmt->bindParam(':endereco', $data['endereco']);
         $stmt->bindParam(':horario', $data['horario']);
         

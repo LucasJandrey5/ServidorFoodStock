@@ -14,7 +14,7 @@ header("Access-Control-Allow-Origin: *"); // Allow requests from any origin (you
 header("Access-Control-Allow-Methods: POST, GET"); // Allow POST and GET requests
 header("Access-Control-Allow-Headers: Content-Type"); // Allow Content-Type header
 
-$con = new mysqli($servername, $username, $password, $dbname);
+$con = new mysqli($servername, $username, $password, $database);
 
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
